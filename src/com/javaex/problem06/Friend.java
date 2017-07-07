@@ -8,7 +8,19 @@ public class Friend {
 
     
     //필요한 메소드 작성
+    public void getName(String name) {
+    	this.name=name;
+    }
     
+    public void getHp(String hp) {
+    	this.hp=hp;
+    	
+    }
+    
+    public void getSchool(String school) {
+    	this.school=school;
+    	
+    }
     
     
     public void showInfo(){

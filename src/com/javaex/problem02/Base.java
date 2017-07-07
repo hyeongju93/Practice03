@@ -3,7 +3,13 @@ package com.javaex.problem02;
 public class Base {
     
     public void service(String state) {
-        
+        if(state.equals("낮")) {
+        	day();
+        } else if(state.equals("밤")) {
+        	night();
+        } else if(state.equals("오후")) {
+        	afternoon();
+        }
         //코드작성
     }
 
@@ -12,7 +18,7 @@ public class Base {
     }
 
     public void night() {
-        //
+        System.out.println("night");
     }
     
     public void afternoon(){

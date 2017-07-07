@@ -10,8 +10,18 @@ public class FriendApp {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("친구를 3명 등록해 주세요");
-
+        String info=new String();
         
+        for(int i=0;i<3;i++) {
+        	info=sc.nextLine();
+        	String[] arr = info.split(" ");
+        	
+        	friendArray[i].getName(arr[0]);
+        	friendArray[i].getHp(arr[1]);
+        	friendArray[i].getSchool(arr[2]);
+        	
+        	
+        }
             // 친구정보 입력받기
 
             // 입력받은 친구정보를 공백으로 분리
@@ -23,6 +33,7 @@ public class FriendApp {
         
         // 친구정보 출력
         for (int i = 0; i < friendArray.length; i++) {
+        	friendArray[i].showInfo();
             //친구정보 출력 메소드 호출
         }
 
