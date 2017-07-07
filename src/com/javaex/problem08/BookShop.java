@@ -17,17 +17,17 @@ public class BookShop {
         books[7] = new Book(8, "귀천", "천상병");
         books[8] = new Book(9, "태백산맥", "조정래");
         books[9] = new Book(10, "풀하우스", "원수연");
-
+        System.out.println(books.length);
         System.out.println("*****도서 정보 출력하기******");
         displayBookInfo(books);
         
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("대여 하고 싶은 책의 번호를 입력하세요:");
-        int num = scanner.nextInt();
-        scanner.close();
+        int num = sc.nextInt();
+        sc.close();
 
         // (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
-        
+        books[num-1].rent();
 
         System.out.println("*****도서 정보 출력하기******");
         displayBookInfo(books);
@@ -35,9 +35,9 @@ public class BookShop {
 
     //(2)전달받은 배열을 모두 출력하는 메소드
     private static void displayBookInfo(Book[] books) {
-    	for(int i=1;i<=books.length;i++) {
-    		System.out.printf("%d 책 제목: %s, 작가:%s, 대여 유무:",books[i].bookNo(),books[i].title(),books[i].author());
+    	for(int i=0;i<books.length;i++) {
     		books[i].print();
+    		
     	}
         //코드작성
     }

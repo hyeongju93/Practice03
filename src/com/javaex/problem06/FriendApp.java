@@ -6,7 +6,7 @@ public class FriendApp {
 
     public static void main(String[] args) {
 
-        Friend[] friendArray = new Friend[3];
+        Friend[] friendArray = new Friend[3];	//공간을 만드는 것
         Scanner sc = new Scanner(System.in);
 
         System.out.println("친구를 3명 등록해 주세요");
@@ -15,10 +15,11 @@ public class FriendApp {
         for(int i=0;i<3;i++) {
         	info=sc.nextLine();
         	String[] arr = info.split(" ");
-        	
-        	friendArray[i].getName(arr[0]);
-        	friendArray[i].getHp(arr[1]);
-        	friendArray[i].getSchool(arr[2]);
+        	Friend fr=new Friend();
+        	fr.getName(arr[0]);
+        	fr.getHp(arr[1]);
+        	fr.getSchool(arr[2]);
+        	friendArray[i]=fr;			//공간에 fr을 집어 넣는다.
         	
         	
         }
